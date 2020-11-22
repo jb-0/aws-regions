@@ -18,10 +18,12 @@ function RegionIpList(props) {
       <table className="region-ip-list-table">
         <thead>
           <tr>
+            <th>no.</th>
             <th>ip_prefix</th>
             <th>region</th>
             <th>service</th>
             <th>network_border_group</th>
+            <th>type</th>
           </tr>
         </thead>
         <tbody>
@@ -30,10 +32,12 @@ function RegionIpList(props) {
               {regionIpData.map((ip) => {
                 return (
                   <tr>
-                    <td>{ip.ip_prefix}</td>
+                    <td>{ip.no}</td>
+                    <td>{ip.ip_prefix || ip.ipv6_prefix}</td>
                     <td>{ip.region}</td>
                     <td>{ip.service}</td>
-                    <td>{ip.network_border_group}</td>
+                    <td>{ip.network_border_group }</td>
+                    <td>{ip.type}</td>
                   </tr>
                 );
               })}
