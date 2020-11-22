@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getAwsIpRanges from '../../data/getAwsIpRanges';
 import './RegionIpList.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function RegionIpList(props) {
   const [regionIpData, setRegionIpData] = useState();
@@ -31,7 +32,7 @@ function RegionIpList(props) {
             <React.Fragment>
               {regionIpData.map((ip) => {
                 return (
-                  <tr>
+                  <tr key={uuidv4()}>
                     <td>{ip.no}</td>
                     <td>{ip.ip_prefix || ip.ipv6_prefix}</td>
                     <td>{ip.region}</td>
