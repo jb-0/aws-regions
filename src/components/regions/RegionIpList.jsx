@@ -20,11 +20,11 @@ function RegionIpList(props) {
         <thead>
           <tr>
             <th>no.</th>
+            <th>type</th>
             <th>ip_prefix</th>
             <th>region</th>
             <th>service</th>
             <th>network_border_group</th>
-            <th>type</th>
           </tr>
         </thead>
         <tbody>
@@ -34,11 +34,11 @@ function RegionIpList(props) {
                 return (
                   <tr key={uuidv4()}>
                     <td>{ip.no}</td>
+                    <td>{ip.type}</td>
                     <td>{ip.ip_prefix || ip.ipv6_prefix}</td>
                     <td>{ip.region}</td>
                     <td>{ip.service}</td>
                     <td>{ip.network_border_group }</td>
-                    <td>{ip.type}</td>
                   </tr>
                 );
               })}
