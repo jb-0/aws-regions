@@ -1,0 +1,49 @@
+.region-ip-list-container {
+  width: 80%;
+  margin: auto;
+  padding: var(--primary-pad) 0;
+}
+
+.region-ip-list-table {
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+.region-ip-list-table thead {
+  color: var(--secondary-color);
+  background-color: var(--quaternary-color);
+}
+
+.region-ip-list-table th,
+.region-ip-list-table td {
+    padding: 12px 15px;
+}
+
+/* Style odd and even rows with different colours for clarity */
+.region-ip-list-table tbody tr:nth-of-type(even) {
+  background-color: var(--tertiary-color);
+}
+
+.region-ip-list-table tbody tr:nth-of-type(odd) {
+  background-color: var(--secondary-color);
+}
+
+/* Add border radius to table corners elements */
+.region-ip-list-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.region-ip-list-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.region-ip-list-table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.region-ip-list-table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
