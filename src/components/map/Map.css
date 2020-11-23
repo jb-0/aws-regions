@@ -4,11 +4,19 @@
 }
 
 .map path {
-  fill: var(--secondary-color);
+  fill: var(--tertiary-color);
   cursor: pointer;
   outline: none;
 }
 
-.map path:hover {
+#us, #za, #hk, #in, #jp, #kr, #sg, #au, #ca, #de, #ie, #gb, #it, #fr, #se, #bh, #br {
   fill: var(--quaternary-color);
+  transition: all .4s ease-in; 
+}
+
+#us:hover, #za:hover, #hk:hover, #in:hover, #jp:hover, #kr:hover, #sg:hover, #au:hover, #ca:hover, 
+#de:hover, #ie:hover, #gb:hover, #it:hover, #fr:hover, #se:hover, #bh:hover, #br:hover {
+  fill: var(--primary-color);
+  stroke: var(--quaternary-color);
+  stroke-width: 1.5;
 }
