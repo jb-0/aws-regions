@@ -1,0 +1,11 @@
+.navbar a, .navbar .title {
+  display: inline-block;
+  padding: 0 20px;
+  color: var(--secondary-color);
+  vertical-align: middle; 
+}
+
+.navbar .title {
+  font-family: 'Carter One', cursive;
+  width: 250px
+}
