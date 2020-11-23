@@ -7,6 +7,12 @@
   fill: var(--tertiary-color);
   cursor: pointer;
   outline: none;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 #us, #za, #hk, #in, #jp, #kr, #sg, #au, #ca, #de, #ie, #gb, #it, #fr, #se, #bh, #br {
@@ -20,3 +26,4 @@
   stroke: var(--quaternary-color);
   stroke-width: 1.5;
 }
+
