@@ -6,7 +6,7 @@ function Navbar() {
     <div className="navbar">
       <a href=""><h3>Map View</h3></a>
       <div className="title">
-        <h1>AWS Region IPs</h1>
+        <h1>AWS Region IP Finder</h1>
       </div>
       <a href=""><h3>List View</h3></a>
     </div>
