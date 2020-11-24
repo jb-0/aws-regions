@@ -7,4 +7,5 @@
   color: var(--secondary-color);
   width: 300px;
   opacity: 0.9;
+  pointer-events: all;
 }
