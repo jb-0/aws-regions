@@ -2,10 +2,10 @@ import React from 'react';
 import './PopUp.css';
 
 function PopUp(props) {
-  console.log(props.x);
+  
   return (
     <div
-      style={{ top: props.mousePosition.x, left: props.mousePosition.y }}
+      style={{ top: props.mousePosition.y, left: props.mousePosition.x }}
       className="popup-container"
     >
       Popup Container
