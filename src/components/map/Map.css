@@ -1,6 +1,7 @@
 .map {
   width: 700px;
   margin: auto;
+  pointer-events: none;
 }
 
 .map path {
@@ -18,6 +19,7 @@
 #us, #za, #hk, #in, #jp, #kr, #sg, #au, #ca, #de, #ie, #gb, #it, #fr, #se, #bh, #br {
   fill: var(--quaternary-color);
   transition: all .4s ease-in; 
+  pointer-events: all;
 }
 
 #us:hover, #za:hover, #hk:hover, #in:hover, #jp:hover, #kr:hover, #sg:hover, #au:hover, #ca:hover, 
