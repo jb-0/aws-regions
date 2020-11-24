@@ -10,7 +10,6 @@ function App() {
     <div>
       <Navbar />
       <MapPage />
-      <RegionIpList />
     </div>
   );
 }
