@@ -35,6 +35,8 @@ function Map(props) {
         <PopUp
           mousePosition={mousePosition}
           clickedCountry={props.clickedCountry}
+          clickedRegion={props.clickedRegion}
+          setClickedRegion={props.setClickedRegion}
         />
       )}
     </div>
