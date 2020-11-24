@@ -8,10 +8,14 @@ function Map(props) {
   const [mousePosition, setMousePosition] = useState();
   const [showPopup, setShowPopup] = useState(false);
 
+  // For each layer of the map add an onclick function that sets the clicked country state to the 
+  // country name
   const layerProps = {
     onClick: ({ target }) => props.setClickedCountry(target.attributes.name.value)
   };
 
+  // If the user clicks anywhere in the map div store the point in time mouse coordinates and show
+  // the popup component
   function onClick(event) {
     setMousePosition({ x: event.nativeEvent.offsetX, y: event.nativeEvent.offsetY });
     setShowPopup(true);
@@ -20,7 +24,7 @@ function Map(props) {
   return (
     <div className="map" onClick={onClick}>
       <VectorMap {...world} layerProps={layerProps} />
-      {showPopup && <PopUp mousePosition={mousePosition}/>}
+      {showPopup && <PopUp mousePosition={mousePosition} clickedCountry={props.clickedCountry}/>}
     </div>
   );
 }
