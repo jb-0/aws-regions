@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Map from '../map/Map';
+import './MapPage.css'
 
-function MapView() {
+function MapPage() {
   const [clickedCountry, setClickedCountry] = useState('Select a Country');
 
   return (
-    <div className="map-view-container">
+    <div className="map-page-container">
       <Map clickedCountry={clickedCountry} setClickedCountry={setClickedCountry} />
     </div>
   );
 }
 
-export default MapView;
+export default MapPage;
