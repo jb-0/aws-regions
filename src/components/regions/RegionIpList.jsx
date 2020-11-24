@@ -8,7 +8,7 @@ function RegionIpList(props) {
 
   useEffect(() => {
     async function setData() {
-      setRegionIpData(await getAwsIpRanges('eu-west-1'));
+      setRegionIpData(await getAwsIpRanges(props.region));
     }
 
     setData();
