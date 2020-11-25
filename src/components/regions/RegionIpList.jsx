@@ -12,7 +12,7 @@ function RegionIpList(props) {
     }
 
     setData();
-  }, []);
+  }, [props.region]);
 
   return (
     <div className="region-ip-list-container">
