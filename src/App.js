@@ -11,9 +11,9 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={MapPage} />
-          <Route path="/map" exact component={MapPage} />
-          <Route path="/list" exact component={RegionList} />
+          <Route path="/aws-regions/" exact component={MapPage} />
+          <Route path="/aws-regions/map" exact component={MapPage} />
+          <Route path="/aws-regions/list" exact component={RegionList} />
         </Switch>
       </Router>
     </div>

@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div className="navbar">
-      <Link to='/map'><button>Map</button></Link>
+      <Link to='/aws-regions/map'><button>Map</button></Link>
 
       <div className="title">
         <h1>AWS Region IP Finder</h1>
       </div>
 
-      <Link to='/list'><button>List</button></Link>
+      <Link to='/aws-regions/list'><button>List</button></Link>
     </div>
   );
 }
