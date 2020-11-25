@@ -11,15 +11,16 @@ function PopUp(props) {
   return (
     <div
       style={{ top: props.mousePosition.y + 20, left: props.mousePosition.x }}
-      className="popup-container"
+      className="popup-container popup"
     >
-      <h3>{props.clickedCountry.name}</h3>
+      <h3 className="popup">{props.clickedCountry.name}</h3>
       {regions[props.clickedCountry.code].map((region) => {
         return (
-          <p
+          <p 
             key={uuidv4()}
             id={region.name}
             onClick={handleClick}
+            className="popup"
           >{`${region.niceName} - ${region.name}`}</p>
         );
       })}

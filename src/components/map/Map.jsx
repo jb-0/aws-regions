@@ -21,11 +21,14 @@ function Map(props) {
   // If the user clicks anywhere in the map div store the point in time mouse coordinates and show
   // the popup component
   function onClick(event) {
-    setMousePosition({
-      x: event.nativeEvent.offsetX,
-      y: event.nativeEvent.offsetY,
-    });
-    setShowPopup(true);
+    // Only fire event if the click is not on the popup box
+    if (!event.target.classList.contains('popup')) {
+      setMousePosition({
+        x: event.nativeEvent.offsetX,
+        y: event.nativeEvent.offsetY,
+      });
+      setShowPopup(true);
+    } 
   }
 
   return (
