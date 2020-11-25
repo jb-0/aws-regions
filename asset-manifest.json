@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/aws-regions/static/css/main.08099ab7.chunk.css",
-    "main.js": "/aws-regions/static/js/main.f344c916.chunk.js",
-    "main.js.map": "/aws-regions/static/js/main.f344c916.chunk.js.map",
+    "main.js": "/aws-regions/static/js/main.db67baa3.chunk.js",
+    "main.js.map": "/aws-regions/static/js/main.db67baa3.chunk.js.map",
     "runtime-main.js": "/aws-regions/static/js/runtime-main.73d668d7.js",
     "runtime-main.js.map": "/aws-regions/static/js/runtime-main.73d668d7.js.map",
-    "static/js/2.03be7034.chunk.js": "/aws-regions/static/js/2.03be7034.chunk.js",
-    "static/js/2.03be7034.chunk.js.map": "/aws-regions/static/js/2.03be7034.chunk.js.map",
+    "static/js/2.3a3de570.chunk.js": "/aws-regions/static/js/2.3a3de570.chunk.js",
+    "static/js/2.3a3de570.chunk.js.map": "/aws-regions/static/js/2.3a3de570.chunk.js.map",
     "index.html": "/aws-regions/index.html",
     "static/css/main.08099ab7.chunk.css.map": "/aws-regions/static/css/main.08099ab7.chunk.css.map",
-    "static/js/2.03be7034.chunk.js.LICENSE.txt": "/aws-regions/static/js/2.03be7034.chunk.js.LICENSE.txt"
+    "static/js/2.3a3de570.chunk.js.LICENSE.txt": "/aws-regions/static/js/2.3a3de570.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.73d668d7.js",
-    "static/js/2.03be7034.chunk.js",
+    "static/js/2.3a3de570.chunk.js",
     "static/css/main.08099ab7.chunk.css",
-    "static/js/main.f344c916.chunk.js"
+    "static/js/main.db67baa3.chunk.js"
   ]
 }
