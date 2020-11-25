@@ -3,6 +3,7 @@
   margin: auto;
   pointer-events: none;
   position: relative;
+  padding-bottom: 30px;
 }
 
 .map path {
