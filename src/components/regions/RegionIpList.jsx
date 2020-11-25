@@ -16,7 +16,7 @@ function RegionIpList(props) {
 
   return (
     <div className="region-ip-list-container">
-      <table className="region-ip-list-table">
+      <table className="region-ip-list-table" ref={props.regionIpListRef}>
         <thead>
           <tr>
             <th>no.</th>

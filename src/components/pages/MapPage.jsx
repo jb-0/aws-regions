@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Map from '../map/Map';
 import RegionIPList from '../regions/RegionIpList';
 import './MapPage.css';
@@ -7,6 +7,11 @@ import regions from '../../data/awsRegions';
 function MapPage() {
   const [clickedCountry, setClickedCountry] = useState();
   const [clickedRegion, setClickedRegion] = useState();
+  const regionIpListRef = useRef();
+
+  useEffect(() => {
+    if (clickedRegion) regionIpListRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [clickedRegion]);
 
   return (
     <div className="map-page-container">
@@ -24,7 +29,7 @@ function MapPage() {
       {clickedRegion && (
         <div>
           <h1>{`${clickedCountry.name} - ${clickedRegion}`}</h1>
-          <RegionIPList region={clickedRegion} />
+          <RegionIPList regionIpListRef={regionIpListRef} region={clickedRegion} />
         </div>
       )}
     </div>
