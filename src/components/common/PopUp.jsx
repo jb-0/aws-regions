@@ -1,6 +1,7 @@
 import React from 'react';
 import './PopUp.css';
 import regions from '../../data/awsRegions';
+import { v4 as uuidv4 } from 'uuid';
 
 function PopUp(props) {
   function handleClick(event) {
@@ -14,7 +15,13 @@ function PopUp(props) {
     >
       <h3>{props.clickedCountry.name}</h3>
       {regions[props.clickedCountry.code].map((region) => {
-        return <p id={region.name} onClick={handleClick}>{`${region.niceName} - ${region.name}`}</p>;
+        return (
+          <p
+            key={uuidv4()}
+            id={region.name}
+            onClick={handleClick}
+          >{`${region.niceName} - ${region.name}`}</p>
+        );
       })}
     </div>
   );
