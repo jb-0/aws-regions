@@ -1,14 +1,17 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <div className="navbar">
-      <a href=""><h3>Map View</h3></a>
+      <Link to='/map'><button>Map</button></Link>
+
       <div className="title">
         <h1>AWS Region IP Finder</h1>
       </div>
-      <a href=""><h3>List View</h3></a>
+
+      <Link to='/list'><button>List</button></Link>
     </div>
   );
 }
