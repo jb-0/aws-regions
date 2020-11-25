@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Map from '../map/Map';
 import RegionIPList from '../regions/RegionIpList';
 import './MapPage.css';
+import regions from '../../data/awsRegions';
 
 function MapPage() {
   const [clickedCountry, setClickedCountry] = useState();
@@ -20,7 +21,12 @@ function MapPage() {
         clickedRegion={clickedRegion}
         setClickedRegion={setClickedRegion}
       />
-      {clickedRegion && <RegionIPList region={clickedRegion} />}
+      {clickedRegion && (
+        <div>
+          <h1>{`${clickedCountry.name} - ${clickedRegion}`}</h1>
+          <RegionIPList region={clickedRegion} />
+        </div>
+      )}
     </div>
   );
 }
