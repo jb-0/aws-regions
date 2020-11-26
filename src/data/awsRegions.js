@@ -49,4 +49,4 @@ const countries =
   'br': 'Brazil',
 };
 
-export default regions;
+export {regions, countries};

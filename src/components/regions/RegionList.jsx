@@ -1,5 +1,6 @@
 import React from 'react';
-import regions from '../../data/awsRegions';
+import {regions, countries} from '../../data/awsRegions';
+import './RegionList.css'
 
 function RegionList() {
   Object.entries(regions).forEach(([key, val]) => {});
@@ -8,7 +9,7 @@ function RegionList() {
     <div className="region-list">
       {Object.entries(regions).map(([key, value]) => {
         return value.map((region) => {
-          return <h1>{region.niceName}</h1>;
+          return <h2>{region.niceName}</h2>;
         });
       })}
     </div>

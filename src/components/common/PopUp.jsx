@@ -1,6 +1,6 @@
 import React from 'react';
 import './PopUp.css';
-import regions from '../../data/awsRegions';
+import {regions} from '../../data/awsRegions';
 import { v4 as uuidv4 } from 'uuid';
 
 function PopUp(props) {
