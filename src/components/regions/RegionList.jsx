@@ -7,7 +7,7 @@ function RegionList() {
     <div className="region-list-grid">
       {Object.entries(regions).map(([key, value]) => {
         return (
-          <div className={`country-grid-item ${key}`}>
+          <div className={`card-style country-grid-item ${key}`}>
             <h2>{countries[key]}</h2>
             {value.map((region) => {
               return <p>{`${region.niceName} - ${region.name} `}</p>;

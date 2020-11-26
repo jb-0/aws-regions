@@ -4,7 +4,3 @@
   grid-gap: 50px;
   grid-auto-flow: dense;
 }
-
-.country-grid-item {
-  background-color: var(--quaternary-color);
-}

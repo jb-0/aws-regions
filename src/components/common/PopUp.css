@@ -1,10 +1,6 @@
 .popup-container {
   position: absolute;
   z-index: 100;
-  border-style: solid;
-  background-color: var(--primary-color);
-  padding: 0 10px 10px;
-  color: var(--secondary-color);
   width: 300px;
   opacity: 0.9;
   pointer-events: all;

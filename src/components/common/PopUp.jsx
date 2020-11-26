@@ -11,7 +11,7 @@ function PopUp(props) {
   return (
     <div
       style={{ top: props.mousePosition.y + 20, left: props.mousePosition.x }}
-      className="popup-container popup"
+      className="card-style popup-container popup"
     >
       <h3 className="popup">{props.clickedCountry.name}</h3>
       {regions[props.clickedCountry.code].map((region) => {
