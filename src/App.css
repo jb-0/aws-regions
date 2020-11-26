@@ -42,6 +42,7 @@ button {
   border-color: var(--secondary-color);
   outline: none;
   padding: 5px 10px;
+  margin: 5px;
 }
 
 button:hover {
