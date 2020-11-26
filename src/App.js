@@ -2,7 +2,7 @@
 import './App.css';
 import Navbar from './components/common/Navbar';
 import MapPage from './components/pages/MapPage';
-import RegionList from './components/regions/RegionList';
+import ListPage from './components/pages/ListPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route path="/aws-regions/" exact component={MapPage} />
           <Route path="/aws-regions/map" exact component={MapPage} />
-          <Route path="/aws-regions/list" exact component={RegionList} />
+          <Route path="/aws-regions/list" exact component={ListPage} />
         </Switch>
       </Router>
     </div>
