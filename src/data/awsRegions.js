@@ -28,4 +28,25 @@ const regions = {
   'br': [{name: 'sa-east-1', niceName: 'Sao Paulo'}],
 };
 
+const countries = 
+{
+  'us': 'United States of America',
+  'za': 'South Africa',
+  'hk': 'Hong Kong',
+  'in': 'India',
+  'jp': 'Japan',
+  'kr': 'South Korea',
+  'sg': 'Singapore',
+  'au': 'Australia',
+  'ca': 'Canada',
+  'de': 'Germany',
+  'ie': 'Ireland',
+  'gb': 'United Kingdom',
+  'it': 'Italy',
+  'fr': 'France',
+  'se': 'Sweden',
+  'bh': 'Bahrain',
+  'br': 'Brazil',
+};
+
 export default regions;
