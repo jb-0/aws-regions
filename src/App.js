@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/common/Navbar';
 import MapPage from './components/pages/MapPage';
 import ListPage from './components/pages/ListPage';
+import MainPage from './components/pages/MainPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -11,9 +12,21 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/aws-regions/" exact component={MapPage} />
-          <Route path="/aws-regions/map" exact component={MapPage} />
-          <Route path="/aws-regions/list" exact component={ListPage} />
+          <Route
+            path="/aws-regions/"
+            exact
+            render={(props) => <MainPage {...props} view="map" />}
+          />
+          <Route
+            path="/aws-regions/map"
+            exact
+            render={(props) => <MainPage {...props} view="map" />}
+          />
+          <Route
+            path="/aws-regions/list"
+            exact
+            render={(props) => <MainPage {...props} view="list" />}
+          />
         </Switch>
       </Router>
     </div>
