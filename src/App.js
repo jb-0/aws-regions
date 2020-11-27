@@ -1,8 +1,6 @@
 // import { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
-import MapPage from './components/pages/MapPage';
-import ListPage from './components/pages/ListPage';
 import MainPage from './components/pages/MainPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
