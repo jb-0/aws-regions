@@ -1,6 +1,8 @@
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import PopUp from './PopUp';
+import { screen } from '@testing-library/react'
+
 
 describe('Pop up component tests', () => {
   let container = null;
@@ -17,7 +19,7 @@ describe('Pop up component tests', () => {
     container = null;
   });
 
-  it('renders with or without a name', () => {
+  it('renders correct country', () => {
     act(() => {
       render(
         <PopUp
@@ -28,5 +30,19 @@ describe('Pop up component tests', () => {
       );
     });
     expect(container.textContent).toContain('Canada');
+  });
+
+  it('renders correct regions based on country prop', () => {
+    act(() => {
+      render(
+        <PopUp
+          mousePosition={{x: 10, y: 10}}
+          clickedCountry={{code: 'jp', name:'Japan'}}
+        />,
+        container
+      );
+    });
+    expect(container.textContent).toContain('ap-northeast-3');
+    expect(container.textContent).toContain('ap-northeast-1');
   });
 });
