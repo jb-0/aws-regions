@@ -1,7 +1,7 @@
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import PopUp from './PopUp';
-import { screen } from '@testing-library/react'
+import { getByText, screen } from '@testing-library/react'
 
 
 describe('Pop up component tests', () => {
@@ -29,7 +29,7 @@ describe('Pop up component tests', () => {
         container
       );
     });
-    expect(container.textContent).toContain('Canada');
+    expect(screen.getByText('Canada')).toBeInTheDocument()
   });
 
   it('renders correct regions based on country prop', () => {
@@ -42,7 +42,7 @@ describe('Pop up component tests', () => {
         container
       );
     });
-    expect(container.textContent).toContain('ap-northeast-3');
-    expect(container.textContent).toContain('ap-northeast-1');
+    expect(screen.getByText('ap-northeast-1')).toBeInTheDocument()
+    expect(screen.getByText('ap-northeast-3')).toBeInTheDocument()
   });
 });
