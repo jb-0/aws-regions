@@ -19,7 +19,7 @@ describe('Pop up component tests', () => {
     container = null;
   });
 
-  it('renders correct country', () => {
+  it('correct country is displayed based on country prop', () => {
     act(() => {
       render(
         <PopUp
@@ -32,7 +32,7 @@ describe('Pop up component tests', () => {
     expect(screen.getByText('Canada')).toBeInTheDocument()
   });
 
-  it('renders correct regions based on country prop', () => {
+  it('correct regions for a country are displayed based on country prop', () => {
     act(() => {
       render(
         <PopUp
