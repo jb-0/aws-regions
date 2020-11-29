@@ -1,10 +1,10 @@
 async function getAwsIpRanges(region) {
-  const res = await fetch('https://ip-ranges.amazonaws.com/ip-ranges.json');
-  const data = await res.json();
+  // Get aws ip data
+  const awsIps = await fetchAwsIpRanges();
 
   // Get the v4 and v6 IPs for the specified region
-  let ipv4 = filterByRegion(data, region, 'ipv4');
-  let ipv6 = filterByRegion(data, region, 'ipv6');
+  let ipv4 = filterByRegion(awsIps, region, 'ipv4');
+  let ipv6 = filterByRegion(awsIps, region, 'ipv6');
 
   // Add a type identifier to each ip
   ipv4 = addType(ipv4, 'ipv4');
@@ -12,6 +12,13 @@ async function getAwsIpRanges(region) {
 
   // Combine ip lists and return them with a row number prefix
   return addRowNo([...ipv4, ...ipv6]);
+}
+
+async function fetchAwsIpRanges() {
+  const res = await fetch('https://ip-ranges.amazonaws.com/ip-ranges.json');
+  const data = await res.json();
+
+  return data;
 }
 
 function filterByRegion(data, region, type) {
@@ -38,3 +45,4 @@ function addRowNo(data) {
 }
 
 export default getAwsIpRanges;
+export {fetchAwsIpRanges, filterByRegion, addType, addRowNo};
