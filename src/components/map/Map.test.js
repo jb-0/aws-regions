@@ -39,7 +39,7 @@ describe('Map component test', () => {
     expect(screen.queryAllByLabelText('World Low Res').length).toBe(1)
   });
 
-  it('clicking a country opens a PopUp container with the countries regions', async () => {
+  it(`clicking a country opens a PopUp container with the country's regions`, async () => {
     const setClickedRegion = jest.fn();
     const setClickedCountry = jest.fn();
 
