@@ -1,7 +1,6 @@
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { fireEvent, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import Map from './Map';
 
 
