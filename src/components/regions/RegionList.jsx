@@ -23,7 +23,7 @@ function RegionList(props) {
     {/* Iterate each item in the regions object */}
       {Object.entries(regions).map(([key, value]) => {
         return (
-          <div className={`card-style country-grid-item ${key}`}>
+          <div key={uuidv4()} className={`card-style country-grid-item ${key}`}>
             <h2>{countries[key]}</h2>
 
             {/* For each value (country) in the regions object, iterate through it's regions */}
