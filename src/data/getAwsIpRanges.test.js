@@ -90,4 +90,27 @@ describe('AWS data fetching and transformation', () => {
     // ipv4 address do not include a colon, so confirm that there are none present
     expect(ipAddress.includes(':')).toBeTruthy();
   });
+
+  it('addType returns the supplied object with an additional key named type', () => {
+    const typeTestReturn = addType(testData.prefixes, 'ipv4')
+    const sampleTypeTest = typeTestReturn[0];
+
+    // Expect the following keys to exist
+    expect(sampleTypeTest.ip_prefix).toBeTruthy();
+    expect(sampleTypeTest.region).toBeTruthy();
+    expect(sampleTypeTest.service).toBeTruthy();
+    expect(sampleTypeTest.network_border_group).toBeTruthy();
+
+    // Expect the additional key type to exist with a value of 'ipv4'
+    expect(sampleTypeTest.type).toBe('ipv4');
+  });
+
+  it('addRowNo returns the supplied object with a row number', () => {
+    const rowNoTestReturn = addRowNo(testData.prefixes)
+
+    // Expect the first element to have a row number of 1, second to have 2 and third to have 3
+    expect(rowNoTestReturn[0].no).toBe(1);
+    expect(rowNoTestReturn[1].no).toBe(2);
+    expect(rowNoTestReturn[2].no).toBe(3);
+  })
 });
