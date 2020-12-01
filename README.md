@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# AWS Regions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo contains a [React site](https://jb-0.github.io/aws-regions/) that can be used to quickly
+get a list of AWS IPs in a tabluar format for a given region. This site presents user's with a map 
+and allows them to select an AWS region, on selecting a region the user is presented with a 
+comprehensive list of IPs for the chosen region. This site leverages AWS's publicly available IP 
+JSON file. Tests created using Jest and React Testing Library.
 
-## Available Scripts
+## Requirements
+You will need to have Node.js installed to run this project, please visit the node site for install
+instructions: https://nodejs.org/en/download/
 
-In the project directory, you can run:
+## Installation
+Once you have NPM installed you can run the following shell commands to install this project:
+```
+git clone https://github.com/jb-0/aws-regions.git
+cd aws-regions
+npm install
+```
 
-### `npm start`
+## Running the application
+To run the app you can execute the following command in the project root directory:
+```
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Using your preferred web browser you can navigate to localhost:3000 to view and use the app.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Testing the application
+To test the app you can execute the following command in the project root directory:
+```
+npm test
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Building the application
+To build the app for production you can execute the following command in the project root directory:
+```
+npm run build
+```
